@@ -1,6 +1,23 @@
-body {
-  margin: 0;
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
 }
+
 #wrap {
   width: 100%;
   min-width: 980px;
@@ -40,7 +57,7 @@ body {
 
 .header .luncher ul li {
   float: left;
-  font-size: 1em;
+  font-size: 1.25em;
   padding: 0.5625em 0 0 1.25em;
   line-height: 0.75em;
   list-style: none;
@@ -53,19 +70,195 @@ body {
   color: #6f6247;
 }
 
+.header .logo {
+  text-align: center;
+}
+
+.header .nav-bar {
+  border-top: 0.20em solid #c6ab40;
+  border-bottom: 0.1em solid #c6ab40;
+}
+
+.header .nav-bar ul {
+  text-align: center;
+  margin: 0;
+  padding: 1em 0 1em 0;
+}
+
+.header .nav-bar ul li {
+  display: inline-block;
+  font-size: 1.25em;
+  padding: 0 0.75em 0 0.75em;
+}
+
+.header .nav-bar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Content */
+.container {
+  position: relative;
+  min-height: 43.8em;
+}
+
+.screen-wrap {
+  width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.screen-wrap .tab {
+  margin-bottom:  17px;
+}
+
+.tab {
+  text-align: center;
+  overflow: hidden;
+}
+
+.tab::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.tab li {
+  display: inline-block;
+}
+
+.screen-wrap .tab li a {
+  text-decoration: none;
+  color: #6f6247;
+  font-size: 1.25em;
+  display: block;
+  text-align: center;
+  width: 175px;
+  height: 50px;
+  background-color: #efebdb;
+  line-height: 50px;
+  border: #6f6247 0.2em solid;
+}
+
+.screen-wrap .tab li a.on {
+  background-color: #231f20;
+  color: #cdc197;
+  font-weight: bold;
+}
+
+/* Tab Content */
+.tab-content {
+  display: block;
+  overflow: hidden;
+}
+
+.tab-content .cur-list {
+  min-height: 27.5625em;
+  padding: 0;
+  overflow: hidden;
+}
+
+.movie-list {
+  overflow: hidden;
+}
+
+.cur-list .cur-box {
+  position: relative;
+}
+
+.cur-list a {
+  display: block;
+}
+
+/* .movies-list, .cur-list {
+  width: 230px;
+  height: 411px;
+  margin: 0 0 40px 20px;
+} */
+
+.cur-list .cur-box .img a img{
+  width: 228px;
+  height: 334px;
+}
+
+/* Cur-box */
+.cur-list li {
+  float: left;
+  position: relative;
+  margin: 0 0 10px 10px;
+}
+
+.cur-list li .list-text {
+  border-top: 1px solid;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.cur-list li .list-text dt {
+  padding: 10px 0 10px 0;
+}
+
+.cur-list li .list-text dt a {
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: bold;
+  color: #231f20;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cur-list li .list-text dd {
+  padding: 0 46px;
+}
+
+/* Override */
+ol, ul, li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+/* .tablet
+{
+  text-align: center;
+  display: none;
+}
+
+.mobile {
+  text-align: center;
+  display: none;
+}
+
+.pc {
+  text-align: center;
+  display: none;
+} */
 
 
-
-
+/* Responsive */
 /* Mobile: witdh < 740px */
 @media only screen and (max-width: 46.1875em) {
-
+  .mobile {
+    display: block;
+    text-align: center;
+  }
 }
 /* Tablet: witdh >=740px and witdh < 1024px */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-
+  .tablet {
+    display: block;
+    text-align: center;
+  }
 }
 /* PC: width > 1024px */
 @media only screen and (min-width: 64em) {
-
+  .pc {
+    display: block;
+    text-align: center;
+  }
 }
