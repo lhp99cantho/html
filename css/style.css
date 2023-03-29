@@ -1,3 +1,71 @@
 body {
-  background-color: aqua;
+  margin: 0;
+}
+#wrap {
+  width: 100%;
+  min-width: 980px;
+}
+
+.ads-banner {
+  width: 100%;
+}
+
+.ads-banner
+.wrap-banner {
+  position: relative;
+  width: 61.25empx;
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 11.25em;
+}
+
+.header .luncher {
+  width: 100%;
+  height: 1.875em;
+  background-color: #efebdb;
+  line-height: 0.75em;
+}
+
+.header .luncher ul {
+  margin: 0;
+  float: right;
+  padding-right: 0.9375em;
+  margin-right: 16em;
+}
+
+.header .luncher ul li {
+  float: left;
+  font-size: 1em;
+  padding: 0.5625em 0 0 1.25em;
+  line-height: 0.75em;
+  list-style: none;
+  
+}
+
+.header .luncher ul li a {
+  font-size: 0.75em;
+  text-decoration: none;
+  color: #6f6247;
+}
+
+
+
+
+
+/* Mobile: witdh < 740px */
+@media only screen and (max-width: 46.1875em) {
+
+}
+/* Tablet: witdh >=740px and witdh < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+}
+/* PC: width > 1024px */
+@media only screen and (min-width: 64em) {
+
 }
