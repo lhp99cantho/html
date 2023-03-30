@@ -18,6 +18,11 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+/* Google font */
+body {
+  font-family: 'Signika Negative', sans-serif;
+}
+
 #wrap {
   width: 100%;
   min-width: 980px;
@@ -103,13 +108,14 @@ time, mark, audio, video {
 }
 
 .screen-wrap {
-  width: 980px;
+  /* width: 61.75em; */
+  width: 62.5em;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .screen-wrap .tab {
-  margin-bottom:  17px;
+  margin-bottom:  1.0625em;
 }
 
 .tab {
@@ -133,10 +139,10 @@ time, mark, audio, video {
   font-size: 1.25em;
   display: block;
   text-align: center;
-  width: 175px;
-  height: 50px;
+  width: 10.9375em;
+  height: 3.125em;
   background-color: #efebdb;
-  line-height: 50px;
+  line-height: 3.125em;
   border: #6f6247 0.2em solid;
 }
 
@@ -150,9 +156,11 @@ time, mark, audio, video {
 .tab-content {
   display: block;
   overflow: hidden;
+  overflow-wrap: break-word;
 }
 
 .tab-content .cur-list {
+  margin-left: -1.6em;
   min-height: 27.5625em;
   padding: 0;
   overflow: hidden;
@@ -177,15 +185,17 @@ time, mark, audio, video {
 } */
 
 .cur-list .cur-box .img a img{
-  width: 228px;
-  height: 334px;
+  width: 14.25em;
+  height: 20.875em;
 }
 
 /* Cur-box */
 .cur-list li {
+  width: 230px;
+  height: 411px;
   float: left;
   position: relative;
-  margin: 0 0 10px 10px;
+  margin: 0 0 1.8em 1.6em;
 }
 
 .cur-list li .list-text {
@@ -195,7 +205,8 @@ time, mark, audio, video {
 }
 
 .cur-list li .list-text dt {
-  padding: 10px 0 10px 0;
+  padding: 0.625em 0 0.625em 0;
+  border: #dedede 0.005rem solid;
 }
 
 .cur-list li .list-text dt a {
@@ -205,17 +216,69 @@ time, mark, audio, video {
   font-weight: bold;
   color: #231f20;
   text-align: center;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  white-space: nowrap;
 }
 
+
 .cur-list li .list-text dd {
-  padding: 0 46px;
+  padding: 0 2em;
+  border-left: #dedede 0.005rem solid;
+  border-right: #dedede 0.005rem solid;
+  border-bottom: #dedede 0.005rem solid;
+}
+
+.date-movie {
+  padding-left: 0.6em;
+  border-left: #dedede 0.005rem solid;
+}
+
+/* Hover */
+.cur-list .layer-hover {
+  width: 229px;
+  height: 333px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(/images/bg_mask06_2.png);
+  color: #fff;
+  font-size: 20px;
+  line-height: 27px;
+  box-sizing: border-box;
+  z-index: 11;
+  font-weight: bold;
+  padding: 114px 20px 0;
+  text-align: center;
+  display: none;
+}
+
+.cur-list .layer-hover a {
+  width: 100%;
+  height: 50px;
+  border: 1px dashed;
+  line-height: 50px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+
+.cur-list li.hover .layer-hover {
+  display: block;
+}
+
+.layer-hover a.active {
+  color: #c6ab40;
 }
 
 /* Override */
 ol, ul, li {
   list-style: none;
+}
+
+li a {
+  text-decoration: none;
 }
 
 img {
@@ -243,22 +306,24 @@ img {
 /* Responsive */
 /* Mobile: witdh < 740px */
 @media only screen and (max-width: 46.1875em) {
-  .mobile {
-    display: block;
-    text-align: center;
+  .screen-wrap {
+    width: 30.45em;
+    margin: 0 auto;
+    overflow: hidden;
   }
 }
 /* Tablet: witdh >=740px and witdh < 1024px */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-  .tablet {
-    display: block;
-    text-align: center;
+  .screen-wrap {
+    width: 46.38em;
+    margin: 0 auto;
+    overflow: hidden;
   }
 }
 /* PC: width > 1024px */
 @media only screen and (min-width: 64em) {
-  .pc {
+  /* .pc {
     display: block;
     text-align: center;
-  }
+  } */
 }
