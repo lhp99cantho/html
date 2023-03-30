@@ -75,6 +75,14 @@ body {
   color: #6f6247;
 }
 
+.luncher ul li a:hover {
+  font-weight: bold;
+}
+
+.header .luncher ul li a:active {
+  font-weight: bold;
+}
+
 .header .logo {
   text-align: center;
 }
@@ -99,6 +107,10 @@ body {
 .header .nav-bar ul li a {
   text-decoration: none;
   color: black;
+}
+
+.nav-bar ul li a:hover {
+  font-weight: bold;
 }
 
 /* Content */
